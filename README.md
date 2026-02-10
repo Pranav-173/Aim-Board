@@ -31,12 +31,6 @@ It combines a **vision board**, **timeline**, and **analytics dashboard** to mak
   - Remove goals with confirmation
   - Data persists using browser Local Storage
 
-- **Onboarding Experience**
-  - Friendly welcome message shown on first visit
-
-- **Responsive Design**
-  - Works smoothly on desktop, tablet, and mobile devices
-
 ---
 
 ## Technologies Used
