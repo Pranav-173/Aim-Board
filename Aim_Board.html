@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Aim Board</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Aim_Board_css.css" rel="Stylesheet">
+</head>
+<body>
+    <header>
+    <h1>🎯 Aim Board</h1>
+    <nav>
+        <button class="active" data-section="vision">🎯 Vision</button>
+        <button data-section="timeline">📅 Timeline</button>
+        <button data-section="analytics">📊 Analytics</button>
+    </nav>
+    </header>
+    <div class="container">
+    <div class="card">
+        <h3>Add Goal</h3>
+        <input id="title" placeholder="Goal title" />
+        <select id="category">
+        <option>Personal</option>
+        <option>Academic</option>
+        <option>Career</option>
+        <option>Health</option>
+        </select>
+        <input type="date" id="date" />
+        <textarea id="quote" placeholder="Motivational quote (optional)"></textarea>
+        <label>Progress: <span id="progressValue">0%</span></label>
+        <input type="range" id="progress" min="0" max="100" value="0" title="Slide to set progress" />
+        <button class="primary" id="addGoal">Add Goal</button>
+    </div>
+    <div>
+        <div id="onboarding" class="hint" style="display:none;">
+        👋 Welcome! Add your first goal to start tracking your progress visually.
+        </div>
+        <div class="sort-bar">
+        <select id="sort">
+            <option value="date">Sort by Date</option>
+            <option value="progress">Sort by Progress</option>
+            <option value="category">Sort by Category</option>
+        </select>
+        </div>
+        <section id="vision" class="active">
+        <div class="grid" id="visionBoard"></div>
+        </section>
+        <section id="timeline">
+        <div id="timelineList"></div>
+        </section>
+        <section id="analytics">
+        <canvas id="chart" width="400" height="200"></canvas>
+        </section>
+    </div>
+    </div>
+    <script src="Aim_Board_js.js"></script>
+</body>
+</html>
